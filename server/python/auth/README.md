@@ -19,4 +19,4 @@ python server.py 8321
 ## 测试
 
 
-然后调用`curl '111.202.90.18:8321/Auth?Pkg=aa.aa'` 看是否得到签名的url
+然后调用`curl 'localhost:8321/Auth?Pkg=aa.aa'` 看是否得到签名的url
