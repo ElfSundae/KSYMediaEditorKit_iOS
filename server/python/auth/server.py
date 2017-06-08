@@ -18,7 +18,7 @@ import json
 import pprint
 from aws_auth import AWSRequestsAuth
 from urlparse import urlparse, parse_qs
-import aksk
+from aksk import *
 
 
 
