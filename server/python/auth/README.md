@@ -20,3 +20,13 @@ python server.py 8321
 
 
 然后调用`curl 'localhost:8321/Auth?Pkg=aa.aa'` 看是否得到签名相关信息
+
+
+
+
+# FAQ
+
+
+## python的代码示例当中有个 aws_token 这个值是什么
+
+不用关心这个值，用nil来处理即可
