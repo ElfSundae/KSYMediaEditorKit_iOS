@@ -33,7 +33,7 @@
 | type | string | ✅ | content type |
 | res | string | ✅ | resource |
 | headers | string | ✅ | http headers |
-| date | string | ✅ | 时间，如果端没传，则使用server的 |
+| date | string | X | 时间，如果端没传，则使用server的 |
 
 
 ### 应答
