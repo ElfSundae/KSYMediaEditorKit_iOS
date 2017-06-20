@@ -22,7 +22,7 @@
 ### 请求
 
 | url | method |
-| --- | --- | --- |
+| --- | --- |
 | api/upload/ks3/sig | GET |
 
 
@@ -53,7 +53,7 @@
 ### 请求
 
 | url | method |
-| --- | --- | --- |
+| --- | --- |
 | api/upload/ks3/signurl | GET |
 
 
