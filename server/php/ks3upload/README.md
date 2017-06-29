@@ -28,7 +28,7 @@
 
 | param | type | 是否必须 | 举例 |
 | --- | ---  | --- | --- |
-| verb | int | ✅  | get, post , eta.. |
+| verb | string | ✅  | get, post , eta.. |
 | md5 | string | ✅ | md5 |
 | type | string | ✅ | content type |
 | res | string | ✅ | resource |
