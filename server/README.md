@@ -3,9 +3,9 @@
 
 ### 1. APP Server端
 
-App需要获取短视频SDK鉴权信息接口，输入Pkg：
+App需要获取短视频SDK鉴权信息，在向App Server请求鉴权信息时，需要携带当前应用的包名Pkg：
 
-`curl 'https://ksvs-demo.ks-live.com:8321/Auth?Pkg=aa'`
+`curl 'http://ksvs-demo.ks-live.com:8321/Auth?Pkg=aa'`
 
 返回:
 
@@ -22,16 +22,16 @@ App需要获取短视频SDK鉴权信息接口，输入Pkg：
 RetCode: 0 表示正常
 
 
-以上流程是我们当前APP DEMO流程，开发者需要模仿以上请求并返回如下字段：
+以上流程示范是我们当前APP DEMO流程，开发者需要模仿以上请求并返回如下字段：
 * Authorization
 * x-amz-date
 
-> 如果只想评估短视频SDK，可以首先使用 https://ksvs-demo.ks-live.com:8321/Auth 进行评估。
+> 如果只想评估短视频SDK，可以首先使用 http://ksvs-demo.ks-live.com:8321/Auth?Pkg=aa 进行评估。
 
-**上线前需要将https://ksvs-demo.ks-live.com:8321/Auth 服务替换成开发者自己的服务接口，不然造成的短视频功能异常，金山云不承担任何责任**
+**上线前需要将 http://ksvs-demo.ks-live.com:8321/Auth?Pkg=aa 服务替换成开发者自己的服务接口，不然造成的短视频功能异常，金山云不承担任何责任**
 
 ### 2. 测试
-当开发者完成了 https://ksvs-demo.ks-live.com:8321/Auth 服务的替换，使用自己的ak/sk进行鉴权了。需要测试返回的字段正常：
+当开发者完成了 http://ksvs-demo.ks-live.com:8321/Auth?Pkg=aa 服务的替换，使用自己的ak/sk进行鉴权了。需要测试返回的字段是否正常：
 * Authorization
 * x-amz-date
 
