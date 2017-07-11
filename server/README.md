@@ -59,9 +59,9 @@ curl https://ksvs.cn-beijing-6.api.ksyun.com\?Action\=KSDKAuth\&Version\=2017-04
 
 ### 3. 反馈
 当前提供了三种服务器auth代码：
-* php
-* java
-* python
+* [php](php/auth)
+* [java](java/auth)
+* [python](python)
 
 如果代码集成到server过程中遇到问题，可以以下两个渠道获取帮助：
 * QQ讨论群：574179720 [视频云技术交流群] 
