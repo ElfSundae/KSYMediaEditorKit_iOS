@@ -10,8 +10,8 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
-import com.ksyun.ksvs.auth.demo.AWSSigner.AWSParamBuilder;
-import com.ksyun.ksvs.auth.demo.AWSSigner.AWSParams;
+import com.ksyun.ksvs.auth.demo.Signer.AWSParamBuilder;
+import com.ksyun.ksvs.auth.demo.Signer.AWSParams;
 
 public class SignerTest {
 
