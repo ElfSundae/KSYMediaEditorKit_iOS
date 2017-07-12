@@ -15,6 +15,16 @@ import com.ksyun.ksvs.auth.demo.Signer.AWSParams;
 
 public class SignerTest {
 
+	/**
+	 * 获取鉴权header所需要的值 Authorization、x-amz-date，请根据实际需求调整示例中参数值。
+	 * 请求示例：
+	 * GET https://ksvs.cn-beijing-6.api.ksyun.com?Action=KSDKAuth&Version=2017-04-01&Pkg=com.ksyun.java.demo
+	 * Header Authorization AWS4-HMAC-SHA256 Credential=AKLT2A9GV11bRQyfdGGJlYV3ug/20170712/cn-beijing-6/ksvs/aws4_request, SignedHeaders=host;x-amz-date, Signature=22253b5b34e53568bcc9118a509cff1e81b09e86677f538b6539037eda24cb47
+	 * Header x-amz-date 20170712T081314Z
+	 * 
+	 * 响应示例：
+	 * {"Data":{"RetCode":0,"RetMsg":"success"},"RequestId":"88fc707e-0441-43c0-8467-15adb40c7dc1"}
+	 */
 	@Test
 	public void generateAuthHeader() {
 		
@@ -41,13 +51,13 @@ public class SignerTest {
 	    builder.setRegion(kscAPIRegion);
 	    builder.setService(kscAPIService);
 	    builder.setQuery(query);
-	    String AMZDate = AWSSigner.getAMZDate();
-	    String NTD = AWSSigner.getNoTimeDate();
+	    String AMZDate = Signer.getAMZDate();
+	    String NTD = Signer.getNoTimeDate();
 	    builder.setAMZDate(AMZDate);
 	    builder.setNTD(NTD);
 	    AWSParams awsParams = builder.build();
 	    
-	    Map<String, String> signResult = AWSSigner.signRequest(awsParams, kscSecretKey, kscAccessKey);
+	    Map<String, String> signResult = Signer.signRequest(awsParams, kscSecretKey, kscAccessKey);
 	    
 	    Map<String, Map<String, Object>> responseObject = new HashMap<String, Map<String, Object>>();
 	    Map<String, Object> responseData = new HashMap<String, Object>();
