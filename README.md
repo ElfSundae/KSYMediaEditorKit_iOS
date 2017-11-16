@@ -141,8 +141,9 @@ $ open demo.xcworkspace
 |额外附件| 文本形式控制台log、crash报告、其他辅助信息（界面截屏或录像等） |
 
 ### 4.2短视频解决方案咨询
-金山云官方产品客服，帮您快速了解对接金山云短视频解决方案
+金山云官方产品客服，帮您快速了解对接金山云短视频解决方案：
 
+<img src="https://raw.githubusercontent.com/wiki/ksvc/KSYMediaEditorKit_iOS/images/wechat.png" width = "200" height = "200" alt="QRCODE" align=center />
 
 ### 4.3 联系方式
 * 主页：[金山云](http://www.ksyun.com/)
