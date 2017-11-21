@@ -41,6 +41,10 @@ FOUNDATION_EXPORT const unsigned char KSYMediaEditorKitVersionString[];
  */
 #import <KSYMediaEditorKit/KSYMEConcator.h>
 /**
+ * 编辑预览播放器
+ */
+#import <KSYMediaEditorKit/KSYMETransitionEditor.h>
+/**
  *  媒体文件辅助工具类
  *  提供 1.获取视频信息 2.视频rotation信息 3.视频截图
  */

@@ -231,7 +231,6 @@
 
 /**
  最短录制时长, 视频集合的总时长必须大于该值，默认为3s
- 
  */
 @property (nonatomic, assign)NSTimeInterval minRecDuration;
 
