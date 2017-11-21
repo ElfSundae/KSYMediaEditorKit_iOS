@@ -2,8 +2,6 @@
 platform :ios, '8.0'
 #use_frameworks!
 
-dev_path=ENV['KSYLIVEDEMO_DIR']
-
 workspace 'demo.xcworkspace'
 
 ############## common dependence libs source ###############
@@ -20,7 +18,7 @@ target 'demo' do
     pod 'KSYAudioPlotView'
     pod 'ZipArchive'
 
-    pod 'libksygpulive/libksygpulive_265', :path=> dev_path
+    pod 'libksygpulive/libksygpulive_265', '~> 2.9.3'
     
     pod 'KMCSTFilter'
     pod 'CTAssetsPickerController',  '~> 3.3.0'
