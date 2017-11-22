@@ -27,7 +27,6 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.hidden = YES;
     // 短视频SDK鉴权
-//    [self registerClipSDK];
     [self requestOffLineAuth];
     
     // 商汤第三方鉴权
@@ -49,7 +48,7 @@
     [[UIApplication sharedApplication].keyWindow setRootViewController:nvg];
 }
 
-#pragma mark - SDK在线鉴权示例（具体流程请参考wiki）
+#pragma mark - SDK离线鉴权示例（具体流程请参考wiki）
 
 - (void)requestOffLineAuth{
     [KSYMEAuth sendClipSDKAuthRequestWithToken:kToken complete:^(KSYStatusCode rc, NSError *error) {
@@ -59,75 +58,6 @@
             NSLog(@"code:%zd,reason:%@",rc,error);
         }
     }];
-}
-
-static int kAuthCount = 3;
-/**
- @abstract 使用ak进行短视频SDK鉴权
- */
-- (void)registerClipSDK {
-    // 1. 从APP Server获取ak
-    [self getAccessKey:^(NSString *ak, NSString *amzDate, NSError *error) {
-        if (ak && !error) {
-            // 2. 通过ak 对短视频sdk鉴权
-            [self authWithAK:ak amzDate:amzDate];
-        }else{
-            NSLog(@"获取AK失败:%@",error);
-        }
-    }];
-}
-
-#pragma mark - SDK鉴权相关
-/**
- @abstract 从服务端获取AccessKey
- 
- @param complete 获取成功将返回短视频SDK的AccessKey，用于SDK鉴权
- @discussion 示例从app server获取ak，用于SDK鉴权
- */
-- (void)getAccessKey:(void(^)(NSString *ak, NSString *amzDate, NSError *error))complete{
-    NSString *bundleId = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@?Pkg=%@", kGetAkURI, bundleId]]];
-    request.HTTPMethod = @"GET";
-    request.timeoutInterval = 5;
-    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (!error && data) {
-            NSDictionary *dict = [[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] valueForKey:@"Data"];
-            if (dict) {
-                NSString *ak = [dict valueForKey:@"Authorization"];
-                NSString *amzDate = [dict valueForKey:@"x-amz-date"];
-                if (complete) {
-                    complete(ak, amzDate, error);
-                }
-            }else{
-                if (complete) {
-                    complete(nil, nil, error);
-                }
-            }
-        }else {
-            if (complete) {
-                complete(nil, nil, error);
-            }
-        }
-    }] resume];
-}
-
-
-- (void)authWithAK:(NSString *)ak amzDate:(NSString *)amzDate{
-    [KSYMEAuth sendClipSDKAuthRequestWithAccessKey:ak
-                                         amzDate:amzDate
-                                        complete:^(KSYStatusCode rc, NSError *err) {
-                                            if (rc == KSYRC_OK) {
-                                                NSLog(@"鉴权成功");
-                                            }else{
-                                                NSLog(@"鉴权失败:%@",err);
-                                                __weak typeof(self) weakSelf = self;
-                                                if (kAuthCount-- > 0) {
-                                                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                                                        [weakSelf authWithAK:ak amzDate:amzDate];
-                                                    });
-                                                }
-                                            }
-                                        }];
 }
 
 - (IBAction)versionLogAction:(UIButton *)sender {
