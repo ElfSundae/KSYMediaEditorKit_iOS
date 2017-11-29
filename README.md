@@ -55,7 +55,7 @@ demo 下载地址：https://github.com/ksvc/KSYMediaEditorKit_iOS/releases
 详细说明请见[wiki][wiki]
 
 ## 1.2 关于SDK费用
-[KSYMediaEditorKit][KSYMediaEditorKit]是一款收费的短视频编辑SDK，按照功能授权收费，可以用于商业集成和使用，询价及细节了解，可扫描下方短视频解决方案咨询的二维码。
+[KSYMediaEditorKit][KSYMediaEditorKit]是一款收费的短视频编辑SDK，按照功能授权收费，可以用于商业集成和使用，询价及细节了解，可扫描下方**短视频解决方案咨询**的二维码，或进入[金山云官网](http://www.ksyun.com/proservice/ksvs)了解。
 
 License说明请见[wiki][license]
 
