@@ -5,6 +5,9 @@
 [![CocoaPods version](https://img.shields.io/cocoapods/v/KSYMediaEditorKit.svg)](https://cocoapods.org/pods/KSYMediaEditorKit)
 [![CocoaPods platform](https://img.shields.io/cocoapods/p/KSYMediaEditorKit.svg)](https://cocoapods.org/pods/KSYMediaEditorKit)
 
+<pre>Source Type:<b> Binary SDK</b>
+Charge Type:<b> nonfree</b></pre>
+
 ## 阅读对象
 本文档面向所有使用[金山云短视频SDK][KSYMediaEditorKit]的开发、测试人员等, 要求读者具有一定的iOS编程开发经验，并且要求读者具备阅读[wiki][wiki]的习惯。
 
@@ -61,19 +64,13 @@ License说明请见[wiki][license]
 
 ### 1.2.1 鉴权
 短视频SDK涉及两个鉴权，区别如下：
-* [SDK鉴权][SDKAuth]免费，但是是必需的
-* KS3鉴权涉及费用，但是是可选择不用的
+* [SDK鉴权][SDKAuth]收费，但是是必需的；
+* KS3鉴权涉及费用，但是是可选择不用的。
 
 #### 1.2.1.1 SDK鉴权
-使用[KSYMediaEditorKit短视频编辑SDK][KSYMediaEditorKit]前需要注册金山云帐号，SDK需要使用开发者帐号鉴权。请[在此注册][ksyun]开发者帐号。
-
-SDK鉴权本身不会引入付费。
-
-* 在线鉴权方式
-为了开始开发用于SDK鉴权所需要的鉴权串，提供了服务器端鉴权需要的代码。
 
 * 离线鉴权方式
-提供离线鉴权方案，需要申请离线鉴权Token
+提供离线鉴权方案，需要申请离线鉴权Token。申请Teken会引入费用。
 
 请见[SDK鉴权说明][SDKAuth]
 
@@ -86,10 +83,11 @@ SDK鉴权本身不会引入付费。
 如果使用[金山云对象存储][ks3]需要开通商务帐号（涉及付费业务），请直接联系金山云商务。
 
 ### 1.2.2 付费
-[KSYMediaEditorKit][KSYMediaEditorKit]可以免费使用。涉及付费的包括：
-* 动态贴纸（可以不集成，如果需要集成需要向第三方供应商付费）
-* 云存储（可以不集成）
-* 点播CDN（可以不集成）
+[KSYMediaEditorKit][KSYMediaEditorKit]是商业SDK。涉及付费的包括：
+* [KSYMediaEditorKit][KSYMediaEditorKit]依赖Token离线鉴权，Token需要付费购买；
+* 动态贴纸（可以不集成，如果需要集成需要向第三方供应商付费）；
+* 云存储（可以不集成）；
+* 点播CDN（可以不集成）；
 
 涉及的云存储和CDN，具体费用请参考[金山云官网][ksyun]
 
