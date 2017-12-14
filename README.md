@@ -44,6 +44,7 @@ Charge Type:<b> nonfree</b></pre>
 * [x] 合成文件上传KS3
 * [x] 多视频合成
 * [x] 多视频合成添加转场
+* [x] 多轨道合成
 * [x] 上传后文件预览播放 
 * [x] 视频画面编辑支持任意分辨率裁剪/填充模式（裁剪任意视频区间）
 * [x] 多视频文件导入，任意分辨率裁剪/填充模式视频拼接
@@ -102,7 +103,7 @@ License说明请见[wiki][license]
 ### 2.2 集成方式
 #### 2.2.1 cocoaPods集成方式
 ``` objc
-pod 'KSYMediaEditorKit', '~> 1.4.0'
+pod 'KSYMediaEditorKit', '~> 2.1.0'
 ```
 
 #### 2.2.2.2 从[oschina](http://git.oschina.net/ksvc/ksymediaeditorkit_ios) clone

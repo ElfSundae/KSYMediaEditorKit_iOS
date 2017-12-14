@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/KSYOutputFormat.html">
+	<File path="Constants/KSYMEMVBuiltInFilter.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/KSYOutputFormat</TokenIdentifier>
-			<Abstract type="html">输出格式</Abstract>
+			<TokenIdentifier>//apple_ref/c/tdef/KSYMEMVBuiltInFilter</TokenIdentifier>
+			<Abstract type="html"></Abstract>
 			<DeclaredIn>KSYDefines.h</DeclaredIn>
             
 			
@@ -14,9 +14,9 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/KSYOutputFormat_MP4</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/KSYMEMVBuiltInFilter_Ext</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>KSYOutputFormat_MP4</Declaration>
+            <Declaration>KSYMEMVBuiltInFilter_Ext</Declaration>
             
             <DeclaredIn>KSYDefines.h</DeclaredIn>
             
@@ -24,9 +24,29 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/KSYOutputFormat_GIF</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/KSYMEMVBuiltInFilter_Pro</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>KSYOutputFormat_GIF</Declaration>
+            <Declaration>KSYMEMVBuiltInFilter_Pro</Declaration>
+            
+            <DeclaredIn>KSYDefines.h</DeclaredIn>
+            
+            <NodeRef refid="25"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/KSYMEMVBuiltInFilter_Effect</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>KSYMEMVBuiltInFilter_Effect</Declaration>
+            
+            <DeclaredIn>KSYDefines.h</DeclaredIn>
+            
+            <NodeRef refid="25"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/KSYMEMVBuiltInFilter_Style</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>KSYMEMVBuiltInFilter_Style</Declaration>
             
             <DeclaredIn>KSYDefines.h</DeclaredIn>
             
