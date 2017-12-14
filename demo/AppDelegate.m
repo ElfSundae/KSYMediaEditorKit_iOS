@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     BuglyConfig *cfg = [[BuglyConfig alloc] init];
-    cfg.channel = @"internal";
+    cfg.channel = @"public";
     [Bugly startWithAppId:@"cfb15875b5" config:cfg];
     
     return YES;

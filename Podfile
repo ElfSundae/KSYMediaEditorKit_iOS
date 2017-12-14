@@ -18,7 +18,7 @@ target 'demo' do
     pod 'KSYAudioPlotView'
     pod 'ZipArchive'
 
-    pod 'libksygpulive/libksygpulive_265', '~> 2.9.3'
+    pod 'libksygpulive/libksygpulive_265',  '~> 2.9.3'
     
     pod 'KMCSTFilter'
     pod 'CTAssetsPickerController',  '~> 3.3.0'

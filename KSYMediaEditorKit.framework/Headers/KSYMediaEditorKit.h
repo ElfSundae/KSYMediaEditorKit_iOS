@@ -2,7 +2,7 @@
 //  KSYMediaEditorKit.h
 //  KSYMediaEditorKit
 //
-//  Created by 张俊 on 31/03/2017.
+//  Created by iVermisseDich on 31/03/2017.
 //  Copyright © 2017 ksyun. All rights reserved.
 //
 
@@ -40,6 +40,10 @@ FOUNDATION_EXPORT const unsigned char KSYMediaEditorKitVersionString[];
  * 编辑预览播放器
  */
 #import <KSYMediaEditorKit/KSYMEConcator.h>
+/**
+ * 多轨道合成（多画布）
+ */
+#import <KSYMediaEditorKit/KSYMultiTrack.h>
 /**
  * 编辑预览播放器
  */
