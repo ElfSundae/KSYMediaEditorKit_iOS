@@ -71,7 +71,7 @@ License说明请见[wiki][license]
 #### 1.2.1.1 SDK鉴权
 
 * 离线鉴权方式
-提供离线鉴权方案，需要申请离线鉴权Token。申请Teken会引入费用。
+提供离线鉴权方案，需要申请离线鉴权Token。申请Token会引入费用。
 
 请见[SDK鉴权说明][SDKAuth]
 
