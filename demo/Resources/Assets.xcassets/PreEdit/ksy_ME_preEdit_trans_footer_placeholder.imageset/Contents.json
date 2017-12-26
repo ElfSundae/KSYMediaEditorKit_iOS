@@ -2,6 +2,10 @@
   "images" : [
     {
       "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
       "filename" : "ksy_ME_preEdit_trans_footer_placeholder@2x.png",
       "scale" : "2x"
     },
